@@ -63,8 +63,9 @@ module.exports = function (ctx) {
       // Quasar plugins
       plugins: [
         'Notify'
-      ]
-      // iconSet: ctx.theme.mat ? 'material-icons' : 'ionicons'
+      ],
+      iconSet: 'fontawesome'
+      // iconSet: ctx.theme.mat ? 'material-icons' : 'fontawesome'
       // i18n: 'de' // Quasar language
     },
     // animations: 'all' --- includes all animations

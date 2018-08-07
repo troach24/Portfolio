@@ -33,15 +33,21 @@
       >
         <q-list-header>Resume</q-list-header>
         <q-item @click.native="openURL('http://www.linkedin.com/in/travis-roach/')">
-          <q-item-side icon="account_circle" />
+          <q-item-side icon="">
+            <q-icon name="fab fa-linkedin" size=40px />
+          </q-item-side>
           <q-item-main label="LinkedIn" sublabel="linkedin.com/in/travis-roach/" />
         </q-item>
         <q-item @click.native="openURL('https://github.com/troach24/')">
-          <q-item-side icon="code" />
+          <q-item-side icon="">
+            <q-icon name="fab fa-github-square" size=40px />
+          </q-item-side>
           <q-item-main label="GitHub" sublabel="github.com/troach24" />
         </q-item>
         <q-item @click.native="openURL('https://twitter.com/TravisRoach24')">
-          <q-item-side icon="rss feed" />
+          <q-item-side icon="">
+            <q-icon name="fab fa-twitter-square" size=40px />
+          </q-item-side>
           <q-item-main label="Twitter" sublabel="@TravisRoach24" />
         </q-item>
       </q-list>
@@ -53,15 +59,21 @@
       >
         <q-list-header>Portfolio</q-list-header>
         <q-item @click.native="openURL('https://github.com/troach24/Galvanize-Capstone')">
-          <q-item-side icon="school" />
+          <q-item-side>
+            <q-icon name="fas fa-golf-ball" size=42px />
+          </q-item-side>
           <q-item-main label="'Ready Golf'" sublabel="Galvanize-Capstone" />
         </q-item>
         <q-item @click.native="openURL('https://github.com/troach24/')">
-          <q-item-side icon="code" />
+          <q-item-side>
+            <q-icon name="fas fa-shopping-cart" size=30px />
+          </q-item-side>
           <q-item-main label="'Eazy Marketplace'" sublabel="github.com/troach24" />
         </q-item>
         <q-item @click.native="openURL('https://discord.gg/5TDhbDg')">
-          <q-item-side icon="chat" />
+          <q-item-side>
+            <q-icon name="kitchen" size=40px />
+          </q-item-side>
           <q-item-main label="'Bridge The Fridge'" sublabel="https://discord.gg/5TDhbDg" />
         </q-item>
       </q-list>

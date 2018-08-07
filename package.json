@@ -1,8 +1,8 @@
 {
-  "name": "fun",
+  "name": "Travis Roach's Portfolio App",
   "version": "1.0.0",
-  "description": "A Quasar Framework app",
-  "productName": "Official Fun",
+  "description": "A portfolio application using the Quasar framework",
+  "productName": "Travis Roach's Portfolio",
   "cordovaId": "org.cordova.quasar.app",
   "author": "Travis Roach <travis.roach24@gmail.com>",
   "private": true,
