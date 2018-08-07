@@ -1,0 +1,94 @@
+<template>
+  <q-layout view="lHh Lpr lFf">
+    <q-layout-header>
+      <q-toolbar
+        color="positive"
+        :inverted="$q.theme === 'ios'"
+      >
+        <q-btn
+          flat
+          dense
+          round
+          @click="leftDrawerOpen = !leftDrawerOpen"
+          aria-label="Menu"
+        >
+          <q-icon name="menu" />
+        </q-btn>
+
+        <q-toolbar-title>
+          Travis Roach
+          <div slot="subtitle">Full Stack Web Developer - Denver, CO</div>
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-layout-header>
+
+    <q-layout-drawer
+      v-model="leftDrawerOpen"
+      :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
+    >
+      <q-list
+        no-border
+        link
+        inset-delimiter
+      >
+        <q-list-header>Resume</q-list-header>
+        <q-item @click.native="openURL('http://www.linkedin.com/in/travis-roach/')">
+          <q-item-side icon="account_circle" />
+          <q-item-main label="LinkedIn" sublabel="linkedin.com/in/travis-roach/" />
+        </q-item>
+        <q-item @click.native="openURL('https://github.com/troach24/')">
+          <q-item-side icon="code" />
+          <q-item-main label="GitHub" sublabel="github.com/troach24" />
+        </q-item>
+        <q-item @click.native="openURL('https://twitter.com/TravisRoach24')">
+          <q-item-side icon="rss feed" />
+          <q-item-main label="Twitter" sublabel="@TravisRoach24" />
+        </q-item>
+      </q-list>
+
+      <q-list
+        no-border
+        link
+        inset-delimiter
+      >
+        <q-list-header>Portfolio</q-list-header>
+        <q-item @click.native="openURL('https://github.com/troach24/Galvanize-Capstone')">
+          <q-item-side icon="school" />
+          <q-item-main label="'Ready Golf'" sublabel="Galvanize-Capstone" />
+        </q-item>
+        <q-item @click.native="openURL('https://github.com/troach24/')">
+          <q-item-side icon="code" />
+          <q-item-main label="'Eazy Marketplace'" sublabel="github.com/troach24" />
+        </q-item>
+        <q-item @click.native="openURL('https://discord.gg/5TDhbDg')">
+          <q-item-side icon="chat" />
+          <q-item-main label="'Bridge The Fridge'" sublabel="https://discord.gg/5TDhbDg" />
+        </q-item>
+      </q-list>
+
+    </q-layout-drawer>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+  </q-layout>
+</template>
+
+<script>
+import { openURL } from 'quasar';
+
+export default {
+  name: 'MyLayout',
+  data() {
+    return {
+      leftDrawerOpen: this.$q.platform.is.desktop,
+    };
+  },
+  methods: {
+    openURL,
+  },
+};
+</script>
+
+<style>
+</style>
