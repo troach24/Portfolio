@@ -10,7 +10,9 @@
     <div class="flex flex-center">
       <q-card class="q-card grow">
         <q-card-media overlay-position="full">
-          <img src="~assets/ready-golf.gif">
+          <img
+            src="https://user-images.githubusercontent.com/33434059/43938021-8ce2249a-9c1e-11e8-8efb-51c2050d1881.gif"
+          >
           <q-card-title slot="overlay">
             Ready Golf
           </q-card-title>
@@ -71,7 +73,9 @@
       </q-card>
       <q-card class="q-card grow">
         <q-card-media overlay-position="full">
-          <img src="~assets/eazy.gif">
+          <img
+            src="https://user-images.githubusercontent.com/33434059/43938039-a1285d70-9c1e-11e8-9f93-9651aa60eaea.gif"
+          >
           <q-card-title slot="overlay">
             Eazy Marketplace
           </q-card-title>
@@ -126,7 +130,9 @@
       </q-card>
       <q-card class="q-card grow">
         <q-card-media overlay-position="full">
-          <img src="~assets/btf.gif">
+          <img
+            src="https://user-images.githubusercontent.com/33434059/43938058-b60cc3f2-9c1e-11e8-94e5-2784463da169.gif"
+          >
           <q-card-title slot="overlay">
             Bridge The Fridge
           </q-card-title>
