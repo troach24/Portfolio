@@ -1,32 +1,15 @@
 <template>
-  <q-page class="flex flex-center">
-    <img class="animate-bounce" src="https://cdn0.rubylane.com/shops/1593475/x235439-C2.1L.jpg?59" alt="" width="500px">
-    <!-- <q-card inline style="width: 500px" class="animate-spin">
-      <q-card-media>
-        <q-parallax :src="'statics/btf-ss.png'" :height="150">
-          <div slot="loading">Loading...</div>
-        </q-parallax>
-      </q-card-media>
-      <q-card-title>
-        Cafe Basilico
-        <q-rating slot="subtitle" v-model="PageIndex" :max="5" />
-        <div slot="right" class="row items-center">
-          <q-icon name="place" /> 250 ft
-        </div>
-      </q-card-title>
-      <q-card-main>
-        <p>$・Italian, Cafe</p>
-        <p class="text-faded">Small plates, salads & sandwiches in an intimate setting.</p>
-      </q-card-main>
-      <q-card-separator />
-      <q-card-actions>
-        <q-btn flat round dense icon="event" />
-        <q-btn flat label="5:30PM" />
-        <q-btn flat label="7:30PM" />
-        <q-btn flat label="9:00PM" />
-        <q-btn flat color="primary" label="Reserve" />
-      </q-card-actions>
-    </q-card> -->
+  <q-page class="flex flex-center container">
+    <div>
+      <h1 class="animate-scale title-text">Travis Roach<br></h1>
+      <h3 class="title-text">How did I get here?</h3>
+    </div>
+    <div class="home-buttons">
+      <router-link to="/projects">
+        <q-btn outline rounded color="black" label="Projects" />
+      </router-link>
+      <!-- <q-btn outline rounded color="black" label="Outlined Button" /> -->
+    </div>
   </q-page>
 </template>
 
@@ -34,7 +17,30 @@
 </style>
 
 <script>
+import { easing } from 'quasar';
+
 export default {
   name: 'PageIndex',
+  data() {
+    return {
+      overshoot: easing.overshoot,
+    };
+  },
 };
 </script>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .title-text {
+    margin: 0;
+    text-align: center;
+  }
+  .home-buttons {
+    margin-top: 30px;
+  }
+</style>
+

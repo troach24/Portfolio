@@ -5,17 +5,17 @@ module.exports = function (ctx) {
     // app plugins (/src/plugins)
     plugins: [
       'i18n',
-      'axios'
+      'axios',
     ],
     css: [
-      'app.styl'
+      'app.styl',
     ],
     extras: [
       ctx.theme.mat ? 'roboto-font' : null,
       'material-icons', // optional, you are not bound to it
       'ionicons',
       'mdi',
-      'fontawesome'
+      'fontawesome',
     ],
     supportIE: true,
     build: {
@@ -25,19 +25,19 @@ module.exports = function (ctx) {
       // gzip: true,
       // analyze: true,
       // extractCSS: false,
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules|quasar)/
+          exclude: /(node_modules|quasar)/,
         })
-      }
+      },
     },
     devServer: {
       // https: true,
       // port: 8080,
-      open: true // opens browser window automatically
+      open: true, // opens browser window automatically
     },
     // framework: 'all' --- includes everything; for dev only!
     framework: {
@@ -62,23 +62,27 @@ module.exports = function (ctx) {
         'QCardMain',
         'QCardMedia',
         'QCardSeparator',
-        'QCardActions'
+        'QCardActions',
+        'QCarousel',
+        'QCarouselSlide',
+        'QCarouselControl',
       ],
       directives: [
-        'Ripple'
+        'Ripple',
+        'GoBack',
       ],
       // Quasar plugins
       plugins: [
-        'Notify'
+        'Notify',
       ],
-      iconSet: 'fontawesome'
+      iconSet: 'fontawesome',
       // iconSet: ctx.theme.mat ? 'material-icons' : 'fontawesome'
       // i18n: 'de' // Quasar language
     },
     // animations: 'all' --- includes all animations
     animations: [],
     ssr: {
-      pwa: false
+      pwa: false,
     },
     pwa: {
       // workboxPluginMode: 'InjectManifest',
@@ -95,37 +99,37 @@ module.exports = function (ctx) {
           {
             'src': 'statics/icons/icon-128x128.png',
             'sizes': '128x128',
-            'type': 'image/png'
+            'type': 'image/png',
           },
           {
             'src': 'statics/icons/icon-192x192.png',
             'sizes': '192x192',
-            'type': 'image/png'
+            'type': 'image/png',
           },
           {
             'src': 'statics/icons/icon-256x256.png',
             'sizes': '256x256',
-            'type': 'image/png'
+            'type': 'image/png',
           },
           {
             'src': 'statics/icons/icon-384x384.png',
             'sizes': '384x384',
-            'type': 'image/png'
+            'type': 'image/png',
           },
           {
             'src': 'statics/icons/icon-512x512.png',
             'sizes': '512x512',
-            'type': 'image/png'
-          }
-        ]
-      }
+            'type': 'image/png',
+          },
+        ],
+      },
     },
     cordova: {
       // id: 'org.cordova.quasar.app'
     },
     electron: {
       // bundler: 'builder', // or 'packager'
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         // do something with Electron process Webpack cfg
       },
       packager: {
@@ -144,7 +148,7 @@ module.exports = function (ctx) {
         // https://www.electron.build/configuration/configuration
 
         // appId: 'quasar-app'
-      }
-    }
-  }
-}
+      },
+    },
+  };
+};
