@@ -8,17 +8,20 @@
       color="black"
       label="Back"
     />
-    <Project />
+    <Project v-if="$q.platform.is.desktop"/>
+    <ProjectiOS v-if="$q.platform.is.mobile"/>
   </q-page>
 </template>
 
 <script>
 import Project from '../components/Project';
+import ProjectiOS from '../components/ProjectiOS';
 
 export default {
   name: 'PageProjects',
   components: {
     Project,
+    ProjectiOS,
   },
 };
 </script>
