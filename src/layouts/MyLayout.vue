@@ -35,7 +35,6 @@
         link
         inset-delimiter
       >
-        <!-- <q-list-header>Resume</q-list-header> -->
         <q-item @click.native="openURL('https://github.com/troach24/')">
           <q-item-side icon="">
             <q-icon name="fab fa-github-square" size=40px />
@@ -61,7 +60,6 @@
         link
         inset-delimiter
       >
-        <!-- <q-list-header>Portfolio</q-list-header> -->
           <q-item>
             <q-item-side>
               <router-link to="/projects">
@@ -69,24 +67,6 @@
               </router-link>
             </q-item-side>
           </q-item>
-        <!--<q-item @click.native="openURL('https://github.com/troach24/Galvanize-Capstone')">
-          <q-item-side>
-            <q-icon name="fas fa-golf-ball" size=42px />
-          </q-item-side>
-          <q-item-main label="'Ready Golf'" sublabel="Click To See Preview" />
-        </q-item>
-        <q-item @click.native="openURL('https://eazy-marketplace.firebaseapp.com/')">
-          <q-item-side>
-            <q-icon name="fas fa-shopping-cart" size=30px />
-          </q-item-side>
-          <q-item-main label="'Eazy Marketplace'" sublabel="Click For Live Demo" />
-        </q-item>
-        <q-item @click.native="openURL('https://bridge-the-fridge.firebaseapp.com/')">
-          <q-item-side>
-            <q-icon name="kitchen" size=40px />
-          </q-item-side>
-          <q-item-main label="'Bridge The Fridge'" sublabel="Click For Live Demo" />
-        </q-item> -->
       </q-list>
 
     </q-layout-drawer>
