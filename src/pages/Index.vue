@@ -2,7 +2,7 @@
   <q-page class="flex flex-center container">
     <div>
       <h1 class="animate-scale title-text">Travis Roach<br></h1>
-      <h3 class="animate-scale title-text">How did I get here?</h3>
+      <h3 class="animate-scale title-text">What am I up to?</h3>
     </div>
     <div class="home-buttons">
       <router-link to="/projects">

@@ -27,6 +27,8 @@
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
       :overlay='true'
       :mini='true'
+      :mini-width='70'
+      :width='70'
     >
       <q-list
         no-border
@@ -62,7 +64,9 @@
         <!-- <q-list-header>Portfolio</q-list-header> -->
           <q-item>
             <q-item-side>
-              <q-icon name="fas fa-rocket" size=40px />
+              <router-link to="/projects">
+                <q-icon name="fas fa-rocket" size=40px color="faded" />
+              </router-link>
             </q-item-side>
           </q-item>
         <!--<q-item @click.native="openURL('https://github.com/troach24/Galvanize-Capstone')">
@@ -111,4 +115,7 @@ export default {
 </script>
 
 <style>
+a {
+  text-decoration: none;
+}
 </style>
