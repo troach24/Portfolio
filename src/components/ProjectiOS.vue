@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-center">
+    <router-link to="/projects/ready-golf">
     <q-card class="q-card">
       <q-card-media overlay-position="full">
         <img
@@ -63,6 +64,7 @@
         </q-list>
       </q-card-main>
     </q-card>
+    </router-link>
     <q-card class="q-card">
       <q-card-media overlay-position="full">
         <img
