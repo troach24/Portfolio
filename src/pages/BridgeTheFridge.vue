@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex-center">
-    <div class="flex flex-center q-mr-xl">
+    <div class="flex flex-center q-mt-md">
       <q-btn
         v-if="$q.platform.is.mobile"
         class="q-mt-lg"
@@ -18,18 +18,21 @@
         color="black"
         label="Back"
       />
-      <div v-if="$q.platform.is.desktop" class="mobi">
-        <div class="q-pl-md">
-          <q-jumbotron class="q-pa-sm" dark>
-            <div class="q-display-3 text-weight-light">Eazy Marketplace</div>
+      <div v-if="$q.platform.is.desktop" class="desk">
+        <img class="q-mt-xl q-pl-md" src="https://user-images.githubusercontent.com/33434059/44218656-6683ff80-a137-11e8-8352-30d46df3d1f9.gif" alt="">
+        <div class="q-pl-md q-mt-lg">
+          <q-jumbotron class="q-pa-sm">
+            <div class="q-display-3 text-weight-light">Bridge The Fridge</div>
             <h3 class="q-title text-weight-regular">
-              A full stack Vue.js CRUD application that simulates an online marketplace experience.
+              Find quality recipes based on the ingredients you'd like to cook with.
             </h3>
             <h6 class="text-weight-light">
-              The goal here was to make shopping look Eazy'®'
+              This is a practical home cooking web app. A user can enter whatever ingredients
+              they'd like to cook with, and pick from a handful of results to view the full recipe.
+              Simple as that!
             </h6>
             <hr class="q-hr q-my-lg">
-            <a href="https://eazy-marketplace.firebaseapp.com/" target="_blank">
+            <a href="https://bridge-the-fridge.firebaseapp.com/" target="_blank">
               <q-btn color="green" class="q-py-sm q-px-xl" label="View Live Demo" />
             </a>
             <div class="q-title q-mt-lg q-mb-md">Tech Used</div>
@@ -39,117 +42,82 @@
                   <img src="~assets/vue-logo.png" alt="" width="30px">
                 </q-item-side>
                 <q-item-main>
-                  <q-item-tile label>Vue.js&nbsp;&nbsp;&nbsp;</q-item-tile>
+                  <q-item-tile label>Vue.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</q-item-tile>
                 </q-item-main>
                 <q-item-side>
-                  <img src="https://cdn.worldvectorlogo.com/logos/heroku.svg" alt="" width="25px">
+                  <img src="https://www.livingchirpy.com/wp-content/uploads/2015/08/GP3YFdPw.png" alt="" width="30px">
                 </q-item-side>
                 <q-item-main>
-                  <q-item-tile label>Heroku</q-item-tile>
+                  <q-item-tile label>Yummly API</q-item-tile>
                 </q-item-main>
               </q-item>
               <q-item>
                 <q-item-side>
-                  <img src="~assets/bootstrap-icon.png" alt="" width="30px">
+                  <img src="~assets/boot-vue.png" alt="" width="35px">
                 </q-item-side>
                 <q-item-main>
-                  <q-item-tile label>Bootstrap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</q-item-tile>
-                </q-item-main>
-                <q-item-side>
-                  <img src="http://www.stickpng.com/assets/images/584815fdcef1014c0b5e497a.png" alt="" width="30px">
-                </q-item-side>
-                <q-item-main>
-                  <q-item-tile label>PostgreSQL</q-item-tile>
+                  <q-item-tile label>Bootstrap-Vue</q-item-tile>
                 </q-item-main>
               </q-item>
               <q-item>
                 <q-item-side>
-                  <img src="~assets/firebase.png" alt="" width="30px">
+                  <img src="~assets/firebase.png" alt="" width="35px">
                 </q-item-side>
                 <q-item-main>
                   <q-item-tile label>Firebase</q-item-tile>
                 </q-item-main>
-                <q-item-side>
-                  <img src="http://www.stickpng.com/assets/images/58480a1ccef1014c0b5e4912.png" alt="" width="30px">
-                </q-item-side>
-                <q-item-main>
-                  <q-item-tile label>KNEX.js</q-item-tile>
-                </q-item-main>
               </q-item>
             </q-list>
           </q-jumbotron>
-          <div class="flex flex-center">
-          <img class="q-pl-md" src="https://user-images.githubusercontent.com/33434059/44053013-a50c5196-9efb-11e8-8720-07f38be4467c.gif" alt="" width="700px">
-          <img class="q-pl-md" src="https://user-images.githubusercontent.com/33434059/44053016-a72015bc-9efb-11e8-8035-7b4207e0469e.gif" alt="" width="700px">
-          <img class="q-pl-md" src="https://user-images.githubusercontent.com/33434059/44053019-a94325b4-9efb-11e8-887d-b4b362dfc6bf.gif" alt="" width="700px">
-        </div>
         </div>
       </div>
       <div v-if="$q.platform.is.mobile" class="mobi">
-        <div class="q-pl-md flex flex-center">
-          <q-jumbotron class="q-pa-sm" dark>
-            <div class="q-display-3 text-weight-light">Eazy Marketplace</div>
-            <h3 class="q-title text-weight-regular">
-              A full stack Vue.js CRUD application that simulates an online marketplace experience.
-            </h3>
-            <h6 class="text-weight-light">
-              The goal here was to make shopping look Eazy'®'
-            </h6>
-            <hr class="q-hr q-my-lg">
-            <a href="https://eazy-marketplace.firebaseapp.com/" target="_blank">
-              <q-btn color="green" class="q-py-sm q-px-xl" label="View Live Demo" />
-            </a>
-            <div class="q-title q-mt-lg q-mb-md">Tech Used</div>
-            <q-list class="q-ml-xs">
-              <q-item>
-                <q-item-side>
-                  <img src="~assets/vue-logo.png" alt="" width="30px">
-                </q-item-side>
-                <q-item-main>
-                  <q-item-tile label>Vue.js&nbsp;&nbsp;&nbsp;</q-item-tile>
-                </q-item-main>
-                <q-item-side>
-                  <img src="https://cdn.worldvectorlogo.com/logos/heroku.svg" alt="" width="25px">
-                </q-item-side>
-                <q-item-main>
-                  <q-item-tile label>Heroku</q-item-tile>
-                </q-item-main>
-              </q-item>
-              <q-item>
-                <q-item-side>
-                  <img src="~assets/bootstrap-icon.png" alt="" width="30px">
-                </q-item-side>
-                <q-item-main>
-                  <q-item-tile label>Bootstrap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</q-item-tile>
-                </q-item-main>
-                <q-item-side>
-                  <img src="http://www.stickpng.com/assets/images/584815fdcef1014c0b5e497a.png" alt="" width="30px">
-                </q-item-side>
-                <q-item-main>
-                  <q-item-tile label>PostgreSQL</q-item-tile>
-                </q-item-main>
-              </q-item>
-              <q-item>
-                <q-item-side>
-                  <img src="~assets/firebase.png" alt="" width="30px">
-                </q-item-side>
-                <q-item-main>
-                  <q-item-tile label>Firebase</q-item-tile>
-                </q-item-main>
-                <q-item-side>
-                  <img src="http://www.stickpng.com/assets/images/58480a1ccef1014c0b5e4912.png" alt="" width="30px">
-                </q-item-side>
-                <q-item-main>
-                  <q-item-tile label>KNEX.js</q-item-tile>
-                </q-item-main>
-              </q-item>
-            </q-list>
-          </q-jumbotron>
-          <div class="flex flex-center">
-          <img class="q-pl-md" src="https://user-images.githubusercontent.com/33434059/44053013-a50c5196-9efb-11e8-8720-07f38be4467c.gif" alt="" width="700px">
-          <img class="q-pl-md" src="https://user-images.githubusercontent.com/33434059/44053016-a72015bc-9efb-11e8-8035-7b4207e0469e.gif" alt="" width="700px">
-          <img class="q-pl-md" src="https://user-images.githubusercontent.com/33434059/44053019-a94325b4-9efb-11e8-887d-b4b362dfc6bf.gif" alt="" width="700px">
-        </div>
+        <img class="q-mt-md q-mr-sm" src="https://user-images.githubusercontent.com/33434059/44218656-6683ff80-a137-11e8-8352-30d46df3d1f9.gif" alt="" width="100%">
+        <div class="q-mt-md q-mr-sm">
+          <h1 class="text-weight-thin q-mb-xs">Bridge The Fridge</h1>
+          <h4 class="no-pad text-weight-thin">
+            Find quality recipes based on the ingredients you'd like to cook with.
+          </h4>
+          <h6 class="text-weight-light">
+            This is a practical home cooking web app. A user can enter whatever ingredients
+            they'd like to cook with, and pick from a handful of results to view the full recipe.
+            Simple as that!
+          </h6>
+          <h3 class="text-weight-thin q-mb-xs">
+            Tech Used
+          </h3>
+          <q-list class="q-ml-xs">
+            <q-item>
+              <q-item-side>
+                <img src="~assets/vue-logo.png" alt="" width="30px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Vue.js&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</q-item-tile>
+              </q-item-main>
+              <q-item-side>
+                <img src="https://www.livingchirpy.com/wp-content/uploads/2015/08/GP3YFdPw.png" alt="" width="30px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Yummly API</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="~assets/boot-vue.png" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Bootstrap-Vue</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="~assets/firebase.png" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Firebase</q-item-tile>
+              </q-item-main>
+            </q-item>
+          </q-list>
         </div>
       </div>
     </div>
@@ -158,7 +126,7 @@
 
 <script>
 export default {
-  name: 'BridgeTheFridge',
+  name: 'EazyMarketplace',
 };
 </script>
 
@@ -180,6 +148,15 @@ export default {
     display: flex;
     flex-direction: column;
     width: 90%;
+  }
+  .jumbo {
+    width: 50%;
+    float: right;
+  }
+  .posi-mobi {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>
 
