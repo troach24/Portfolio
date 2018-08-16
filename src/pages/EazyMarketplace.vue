@@ -1,7 +1,6 @@
 <template>
   <q-page class="flex flex-center">
     <div class="flex flex-center q-mt-md">
-      <!-- q-mr-xl? ^ -->
       <q-btn
         v-if="$q.platform.is.mobile"
         class="q-mt-lg"
