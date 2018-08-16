@@ -130,7 +130,7 @@
 
 <script>
 export default {
-  name: 'EazyMarketplace',
+  name: 'BridgeTheFridge',
 };
 </script>
 

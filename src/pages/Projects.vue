@@ -2,6 +2,7 @@
   <q-page class="flex flex-center">
       <!-- class="fixed-top-left absolute-top-left" -->
     <q-btn
+      class=""
       v-if="$q.platform.is.desktop"
       rounded
       outline
