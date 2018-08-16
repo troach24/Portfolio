@@ -83,6 +83,10 @@
             they'd like to cook with, and pick from a handful of results to view the full recipe.
             Simple as that!
           </h6>
+          <hr class="q-hr q-my-lg">
+          <a href="https://bridge-the-fridge.firebaseapp.com/" target="_blank">
+            <q-btn color="green" class="q-py-sm q-px-xl" label="View Live Demo" />
+          </a>
           <h3 class="text-weight-thin q-mb-xs">
             Tech Used
           </h3>

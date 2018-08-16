@@ -97,6 +97,10 @@
             test credit card number. As a 'seller,' a user can add, edit, and or delete inventory
             items from the database.
           </h6>
+          <hr class="q-hr q-my-lg">
+          <a href="https://eazy-marketplace.firebaseapp.com/" target="_blank">
+            <q-btn color="green" class="q-py-sm q-px-xl" label="View Live Demo" />
+          </a>
           <h3 class="text-weight-thin q-mb-xs">
             Tech Used
           </h3>

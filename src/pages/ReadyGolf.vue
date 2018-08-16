@@ -103,6 +103,10 @@
            demonstrates the virtual check-in process for a previously booked tee time, as well
            as how to place food and drink orders using the app.
           </h6>
+          <hr class="q-hr q-my-lg">
+          <a href="https://github.com/troach24/Galvanize-Capstone" target="_blank">
+            <q-btn color="green" class="q-py-sm q-px-xl" label="View on GitHub" />
+          </a>
           <h3 class="text-weight-thin q-mb-xs">
             Tech Used
           </h3>
