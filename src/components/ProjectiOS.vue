@@ -65,6 +65,7 @@
       </q-card-main>
     </q-card>
     </router-link>
+    <router-link to="projects/eazy-marketplace">
     <q-card class="q-card">
       <q-card-media overlay-position="full">
         <img
@@ -122,6 +123,7 @@
         </q-list>
       </q-card-main>
     </q-card>
+    </router-link>
     <q-card class="q-card">
       <q-card-media overlay-position="full">
         <img
