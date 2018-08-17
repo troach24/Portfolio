@@ -36,6 +36,8 @@
             <a href="https://github.com/troach24/Galvanize-Capstone" target="_blank">
               <q-btn color="green" class="q-py-sm q-px-xl" label="View on GitHub" />
             </a>
+            <br>
+            <small>*Demo not yet available.</small>
             <div class="q-title q-mt-lg q-mb-md">Tech Used</div>
             <q-list class="q-ml-xs">
               <q-item>
@@ -107,6 +109,8 @@
           <a href="https://github.com/troach24/Galvanize-Capstone" target="_blank">
             <q-btn color="green" class="q-py-sm q-px-xl" label="View on GitHub" />
           </a>
+          <br>
+          <small>*Demo not yet available.</small>
           <h3 class="text-weight-thin q-mb-xs">
             Tech Used
           </h3>
