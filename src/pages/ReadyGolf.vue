@@ -19,7 +19,7 @@
         label="Back"
       />
       <div v-if="$q.platform.is.desktop" class="desk">
-        <img class="q-pl-md" src="https://user-images.githubusercontent.com/33434059/44042735-472d004c-9ede-11e8-85b2-6eb5a7a01a5e.gif" alt="">
+        <img class="q-pl-md" src="https://user-images.githubusercontent.com/33434059/44278633-d5cb2380-a20b-11e8-9cc0-55fc3b066de0.gif" alt="">
         <div class="q-pl-md">
           <q-jumbotron class="q-pa-sm" dark>
             <div class="q-display-3 text-weight-light">⛳️ Ready Golf 🏌️‍</div>
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div v-if="$q.platform.is.mobile" class="mobi">
-        <img class="q-mt-md q-mr-sm" src="https://user-images.githubusercontent.com/33434059/44042735-472d004c-9ede-11e8-85b2-6eb5a7a01a5e.gif" alt="">
+        <img class="q-mt-md q-mr-sm" src="https://user-images.githubusercontent.com/33434059/44278633-d5cb2380-a20b-11e8-9cc0-55fc3b066de0.gif" alt="">
         <div class="q-mt-md q-mr-sm">
           <h1 class="text-weight-thin q-mb-xs">Ready Golf</h1>
           <h4 class="no-pad text-weight-thin">
