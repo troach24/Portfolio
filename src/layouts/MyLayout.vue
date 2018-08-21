@@ -63,6 +63,8 @@
           <q-item>
             <q-item-side>
               <router-link to="/projects">
+                <small class="text-weight-thin q-pb-sm">PROJECTS</small>
+                <br class="q-pb-lg">
                 <q-icon name="fas fa-rocket" size=40px color="faded" />
               </router-link>
             </q-item-side>
