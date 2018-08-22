@@ -2,13 +2,7 @@
   <q-page class="flex flex-center container">
     <div>
       <h1 class="animate-scale title-text">Travis Roach<br></h1>
-      <!-- <transition
-        appear
-        enter-active-class="animated tada"
-        leave-active-class="animated fadeOut"
-      > -->
-        <h3 class="animate-scale title-text">An app that revolves around me.</h3>
-      <!-- </transition> -->
+      <h3 class="animate-scale title-text">An app that revolves around me.</h3>
     </div>
     <div class="home-buttons">
       <router-link to="/projects">

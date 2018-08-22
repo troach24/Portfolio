@@ -15,10 +15,12 @@
           <q-icon name="menu" />
         </q-btn>
 
-        <q-toolbar-title>
-          Travis Roach
-          <div slot="subtitle">Full Stack Web Developer - Denver, CO</div>
-        </q-toolbar-title>
+        <router-link id="home-link" to="/">
+          <q-toolbar-title>
+            Travis Roach
+            <div slot="subtitle">Full Stack Web Developer - Denver, CO</div>
+          </q-toolbar-title>
+        </router-link>
       </q-toolbar>
     </q-layout-header>
 
@@ -87,7 +89,6 @@ export default {
   data() {
     return {
       leftDrawerOpen: false,
-      // leftDrawerOpen: this.$q.platform.is.desktop,
     };
   },
   methods: {
@@ -99,5 +100,8 @@ export default {
 <style>
 a {
   text-decoration: none;
+}
+#home-link {
+  color: white;
 }
 </style>
