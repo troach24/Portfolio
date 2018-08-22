@@ -30,20 +30,10 @@
       <q-list no-border link inset-delimiter>
         <q-item @click.native="openURL('https://github.com/troach24/')">
           <q-item-side>
-            <div v-if="$q.platform.is.mobile">
-              <small class="text-weight-light text-white">GitHub</small>
-              <br>
-            </div>
+            <small class="text-weight-light text-white">GitHub</small>
+            <br>
             <q-icon
-            v-if="$q.platform.is.desktop"
               class="q-pt-sm q-pb-sm"
-              color="white"
-              name="fab fa-github-square"
-              size=40px
-            />
-            <q-icon
-              v-if="$q.platform.is.mobile"
-              class="q-pt-xs"
               color="white"
               name="fab fa-github-square"
               size=40px
@@ -52,20 +42,10 @@
         </q-item>
         <q-item @click.native="openURL('http://www.linkedin.com/in/travis-roach/')">
           <q-item-side>
-            <div v-if="$q.platform.is.mobile">
-              <small class="text-weight-light text-white">LinkedIn</small>
-              <br>
-            </div>
+            <small class="text-weight-light text-white">LinkedIn</small>
+            <br>
             <q-icon
-              v-if="$q.platform.is.desktop"
               class="q-pt-sm q-pb-sm"
-              color="white"
-              name="fab fa-linkedin"
-              size=40px
-            />
-            <q-icon
-              v-if="$q.platform.is.mobile"
-              class="q-pt-xs"
               color="white"
               name="fab fa-linkedin"
               size=40px
@@ -74,20 +54,10 @@
         </q-item>
         <q-item @click.native="openURL('https://twitter.com/TravisRoach24')">
           <q-item-side>
-            <div v-if="$q.platform.is.mobile">
-              <small class="text-weight-light text-white">Twitter</small>
-              <br>
-            </div>
+            <small class="text-weight-light text-white">Twitter</small>
+            <br>
             <q-icon
-              v-if="$q.platform.is.desktop"
               class="q-pt-sm q-pb-sm"
-              color="white"
-              name="fab fa-twitter-square"
-              size=40px
-            />
-            <q-icon
-              v-if="$q.platform.is.mobile"
-              class="q-pt-xs"
               color="white"
               name="fab fa-twitter-square"
               size=40px
@@ -97,22 +67,12 @@
         <q-item>
           <q-item-side>
             <router-link to="/projects">
-              <div v-if="$q.platform.is.mobile">
-                <small class="text-weight-light text-white">Projects</small>
-                <br>
-              </div>
+              <small class="text-weight-light text-white">Projects</small>
+              <br>
               <q-icon
-                v-if="$q.platform.is.desktop"
                 class="q-pt-sm q-pb-sm"
                 color="white"
-                name="fas fa-rocket"
-                size=37px
-              />
-              <q-icon
-                v-if="$q.platform.is.mobile"
-                class="q-pt-xs"
-                color="white"
-                name="fas fa-rocket"
+                name="fas fa-dolly"
                 size=37px
               />
             </router-link>

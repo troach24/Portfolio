@@ -7,7 +7,7 @@
       rounded
       outline
       v-go-back=" '/' "
-      color="black"
+      color="blue-9"
       label="Back"
     />
     <q-btn
@@ -16,7 +16,7 @@
       rounded
       outline
       v-go-back=" '/' "
-      color="black"
+      color="blue-9"
       label="Back"
     />
     <Project v-if="$q.platform.is.desktop"/>
