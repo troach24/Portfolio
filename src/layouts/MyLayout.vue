@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-layout-header>
       <q-toolbar
-        color="positive"
+        color="blue-9"
         :inverted="$q.theme === 'ios'"
       >
         <q-btn
@@ -26,11 +26,11 @@
 
     <q-layout-drawer
       v-model="leftDrawerOpen"
-      :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
+      :content-class="$q.theme === 'mat' ? 'bg-tertiary' : null"
       :overlay='true'
       :mini='true'
-      :mini-width='70'
-      :width='70'
+      :mini-width='80'
+      behavior='desktop'
     >
       <q-list
         no-border
@@ -38,22 +38,28 @@
         inset-delimiter
       >
         <q-item @click.native="openURL('https://github.com/troach24/')">
-          <q-item-side icon="">
-            <q-icon name="fab fa-github-square" size=40px />
+          <q-item-side>
+            <small class="text-weight-light text-white">GitHub</small>
+            <br>
+            <q-icon color="white" name="fab fa-github-square" size=40px />
           </q-item-side>
-          <q-item-main label="GitHub" sublabel="github.com/troach24" />
+          <!-- <q-item-main label="GitHub" sublabel="github.com/troach24" /> -->
         </q-item>
         <q-item @click.native="openURL('http://www.linkedin.com/in/travis-roach/')">
-          <q-item-side icon="">
-            <q-icon name="fab fa-linkedin" size=40px />
+          <q-item-side>
+            <small class="text-weight-light text-white">LinkedIn</small>
+            <br>
+            <q-icon color="white" name="fab fa-linkedin" size=40px />
           </q-item-side>
-          <q-item-main label="LinkedIn" sublabel="linkedin.com/in/travis-roach/" />
+          <!-- <q-item-main label="LinkedIn" sublabel="linkedin.com/in/travis-roach/" /> -->
         </q-item>
         <q-item @click.native="openURL('https://twitter.com/TravisRoach24')">
-          <q-item-side icon="">
-            <q-icon name="fab fa-twitter-square" size=40px />
+          <q-item-side>
+            <small class="text-weight-light text-white">Twitter</small>
+            <br>
+            <q-icon color="white" name="fab fa-twitter-square" size=40px />
           </q-item-side>
-          <q-item-main label="Twitter" sublabel="@TravisRoach24" />
+          <!-- <q-item-main label="Twitter" sublabel="@TravisRoach24" /> -->
         </q-item>
       </q-list>
 
@@ -65,9 +71,14 @@
           <q-item>
             <q-item-side>
               <router-link to="/projects">
-                <small class="text-weight-thin q-pb-sm">PROJECTS</small>
-                <br class="q-pb-lg">
-                <q-icon name="fas fa-rocket" size=40px color="faded" />
+                <small class="text-weight-light text-white">Projects</small>
+                <br>
+                <q-icon
+                  class="q-pt-sm"
+                  color="white"
+                  name="fas fa-rocket"
+                  size=37px
+                />
               </router-link>
             </q-item-side>
           </q-item>
