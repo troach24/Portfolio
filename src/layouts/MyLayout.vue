@@ -20,9 +20,9 @@
       </q-toolbar>
     </q-layout-header>
     <q-layout-drawer
+      :overlay='true'
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-tertiary' : null"
-      :overlay='true'
       :mini='true'
       :mini-width='80'
       behavior='desktop'
@@ -93,7 +93,7 @@ export default {
   name: 'MyLayout',
   data() {
     return {
-      leftDrawerOpen: false,
+      leftDrawerOpen: true,
     };
   },
   methods: {

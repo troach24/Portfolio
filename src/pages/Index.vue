@@ -6,9 +6,11 @@
     </div>
     <div class="home-buttons">
       <router-link to="/projects">
-        <q-btn outline rounded color="blue-9" label="Projects" />
+        <q-btn class="q-mr-sm" outline rounded color="blue-9" label="Projects" />
       </router-link>
-      <!-- <q-btn outline rounded color="black" label="Outlined Button" /> -->
+      <router-link to="/about">
+        <q-btn class="q-ml-sm" outline rounded color="blue-9" label="About Me" />
+      </router-link>
     </div>
   </q-page>
 </template>

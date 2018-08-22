@@ -9,6 +9,7 @@ const routes = [
       { path: '/projects/ready-golf', component: () => import('pages/ReadyGolf.vue') },
       { path: '/projects/eazy-marketplace', component: () => import('pages/EazyMarketplace.vue') },
       { path: '/projects/bridge-the-fridge', component: () => import('pages/BridgeTheFridge.vue') },
+      { path: '/about', component: () => import('pages/About.vue') },
     ],
   },
 ];
