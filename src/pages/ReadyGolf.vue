@@ -34,7 +34,7 @@
             </h6>
             <hr class="q-hr q-my-lg">
             <a href="https://github.com/troach24/Galvanize-Capstone" target="_blank">
-              <q-btn color="green" class="q-py-sm q-px-xl" label="View on GitHub" />
+              <q-btn color="green" class="q-py-sm q-px-xl" label="View GitHub Repo" />
             </a>
             <br>
             <small>*Demo not yet available.</small>
@@ -107,7 +107,7 @@
           </h6>
           <hr class="q-hr q-my-lg">
           <a href="https://github.com/troach24/Galvanize-Capstone" target="_blank">
-            <q-btn color="green" class="q-py-sm q-px-xl" label="View on GitHub" />
+            <q-btn color="green" class="q-py-sm q-px-xl" label="View GitHub Repo" />
           </a>
           <br>
           <small>*Demo not yet available.</small>
