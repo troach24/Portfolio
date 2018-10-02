@@ -1,6 +1,5 @@
 <template>
   <q-page class="flex flex-center q-ml-none q-pl-none">
-    <!-- <img class="fixed-left q-mt-lg" src="../assets/t-roach.png" alt=""> -->
     <div class="container">
       <img
         src="https://render.bitstrips.com/v2/cpanel/7e3bc453-64fb-4a34-bcaa-481724e5d3d9-e362807d-2567-490a-be3e-168e20f4adea-v1.png?transparent=1&palette=1"
