@@ -78,6 +78,18 @@
             </router-link>
           </q-item-side>
         </q-item>
+        <q-item @click.native="openURL('https://drive.google.com/file/d/1wmCizCRbE2J1wWzVCHAH-5ckQ8Qsk2AU/view?usp=sharing')">
+          <q-item-side>
+            <small class="text-weight-light text-white">Resume</small>
+            <br>
+            <q-icon
+              class="q-pt-sm q-pb-sm"
+              color="white"
+              name="far fa-file-alt"
+              size=40px
+            />
+          </q-item-side>
+        </q-item>
       </q-list>
     </q-layout-drawer>
     <q-page-container>
