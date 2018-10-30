@@ -214,6 +214,56 @@
       </q-card>
     </router-link>
 
+    <router-link to="/projects/ottno">
+      <q-card class="q-card grow">
+        <q-card-media overlay-position="full">
+          <img
+            src="../assets/ottno-ss.png"
+          >
+          <q-card-title slot="overlay">
+            On To The Next One<br>*In Progress
+          </q-card-title>
+        </q-card-media>
+        <q-card-separator />
+        <q-card-main class="no-pad">
+          <q-list>
+            <q-item>
+              <q-item-side>
+                <img src="~assets/vue-logo.png" alt="" width="30px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Vue.js</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Vuetify</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="https://uploads-ssl.webflow.com/5b9838c153114f26f48c1c1c/5b9838c153114f16918c1cea_original%20logo%20icon.svg" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Timekit API</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="~assets/firebase.png" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Firebase</q-item-tile>
+              </q-item-main>
+            </q-item>
+          </q-list>
+        </q-card-main>
+      </q-card>
+    </router-link>
+
   </div>
 </template>
 
