@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-layout-header>
+    <!-- <q-layout-header>
       <q-toolbar color="blue-9" :inverted="$q.theme === 'ios'">
         <q-btn
           flat
@@ -18,7 +18,10 @@
           </q-toolbar-title>
         </router-link>
       </q-toolbar>
-    </q-layout-header>
+    </q-layout-header> -->
+    <Header :leftDrawerOpen="leftDrawerOpen"
+      @open-drawer="openDrawer"
+    />
     <q-layout-drawer
       :overlay='true'
       v-model="leftDrawerOpen"
@@ -99,17 +102,25 @@
 </template>
 
 <script>
-import { openURL } from 'quasar';
+// import { openURL } from 'quasar';
+import Header from '../components/Header';
 
 export default {
   name: 'MyLayout',
+  components: {
+    Header,
+  },
   data() {
     return {
       leftDrawerOpen: true,
     };
   },
   methods: {
-    openURL,
+    openDrawer() {
+      this.leftDrawerOpen = !this.leftDrawerOpen;
+    },
+  },
+  computed: {
   },
 };
 </script>
