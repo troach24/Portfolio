@@ -5,7 +5,7 @@
         flat
         dense
         round
-        @click="blah()"
+        @click="toggleDrawer()"
         aria-label="Menu"
       >
         <q-icon name="menu" />
@@ -26,7 +26,7 @@ export default {
     leftDrawerOpen: Boolean,
   },
   methods: {
-    blah() {
+    toggleDrawer() {
       this.$emit('open-drawer');
     },
   },

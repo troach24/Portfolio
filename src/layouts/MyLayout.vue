@@ -1,24 +1,5 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <!-- <q-layout-header>
-      <q-toolbar color="blue-9" :inverted="$q.theme === 'ios'">
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-        >
-          <q-icon name="menu" />
-        </q-btn>
-        <router-link id="home-link" to="/">
-          <q-toolbar-title>
-            Travis Roach
-            <div slot="subtitle">Full Stack Web Developer - Denver, CO</div>
-          </q-toolbar-title>
-        </router-link>
-      </q-toolbar>
-    </q-layout-header> -->
     <Header :leftDrawerOpen="leftDrawerOpen"
       @open-drawer="openDrawer"
     />
@@ -31,7 +12,7 @@
       behavior='desktop'
     >
       <q-list no-border link inset-delimiter>
-        <q-item @click.native="openURL('https://github.com/troach24/')">
+        <q-item @click.native="goToLink('https://github.com/troach24/')">
           <q-item-side>
             <small class="text-weight-light text-white">GitHub</small>
             <br>
@@ -43,7 +24,7 @@
             />
           </q-item-side>
         </q-item>
-        <q-item @click.native="openURL('http://www.linkedin.com/in/travis-roach/')">
+        <q-item @click.native="goToLink('http://www.linkedin.com/in/travis-roach/')">
           <q-item-side>
             <small class="text-weight-light text-white">LinkedIn</small>
             <br>
@@ -55,7 +36,7 @@
             />
           </q-item-side>
         </q-item>
-        <q-item @click.native="openURL('https://twitter.com/TravisRoach24')">
+        <q-item @click.native="goToLink('https://twitter.com/TravisRoach24')">
           <q-item-side>
             <small class="text-weight-light text-white">Twitter</small>
             <br>
@@ -81,7 +62,7 @@
             </router-link>
           </q-item-side>
         </q-item>
-        <q-item @click.native="openURL('https://drive.google.com/file/d/1wmCizCRbE2J1wWzVCHAH-5ckQ8Qsk2AU/view?usp=sharing')">
+        <q-item @click.native="goToLink('https://drive.google.com/file/d/1wmCizCRbE2J1wWzVCHAH-5ckQ8Qsk2AU/view?usp=sharing')">
           <q-item-side>
             <small class="text-weight-light text-white">Resume</small>
             <br>
@@ -102,7 +83,7 @@
 </template>
 
 <script>
-// import { openURL } from 'quasar';
+import { openURL } from 'quasar';
 import Header from '../components/Header';
 
 export default {
@@ -118,6 +99,9 @@ export default {
   methods: {
     openDrawer() {
       this.leftDrawerOpen = !this.leftDrawerOpen;
+    },
+    goToLink(str) {
+      openURL(str);
     },
   },
   computed: {
