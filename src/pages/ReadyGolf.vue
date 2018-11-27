@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex flex-center animate-scale">
     <div class="flex flex-center">
       <q-btn
         v-if="$q.platform.is.mobile"

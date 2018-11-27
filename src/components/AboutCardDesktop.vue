@@ -1,21 +1,26 @@
 <template>
   <div>
-    <q-card inline style="width: 800px">
+    <q-card class="animate-scale" inline style="width: 800px">
       <q-card-media overlay-position="bottom">
         <img src="~assets/bio-pic-2.jpg">
         <q-card-title slot="overlay">
           Web Developer
           <span slot="subtitle"><q-icon name="place" /> Denver, CO</span>
           <a slot="right" href="https://drive.google.com/file/d/1wmCizCRbE2J1wWzVCHAH-5ckQ8Qsk2AU/view?usp=sharing" target="_blank">
-            <q-btn class="row items-center" color="primary" label="View Resume" />
+            <q-btn class="row items-center" color="primary" label="Contact Me" />
+            <q-btn class="row items-center q-ml-sm" color="primary" label="View Resume" />
           </a>
         </q-card-title>
       </q-card-media>
       <q-card-title>
       </q-card-title>
       <q-card-main>
-        <p>Born and raised in the Vail Valley 🏔🏂 / CSU Ram 🐏 / Galvanize Graduate - August 2018</p>
-        <p>Passoinate about solving real world problems using code ≺ 🙌≻</p>
+        <p>
+          Born and raised in the Vail Valley 🏔🏂 / CSU Ram 🐏 / Galvanize Graduate - August 2018 🤓
+        </p>
+        <p>
+          Passoinate about solving real world problems using code ≺ 🙌≻
+        </p>
       </q-card-main>
       <q-card-separator />
       <q-card-actions>
