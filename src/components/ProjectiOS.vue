@@ -171,6 +171,98 @@
         </q-card-main>
       </q-card>
     </router-link>
+
+    <router-link to="/projects/portfolio">
+      <q-card class="q-card">
+        <q-card-media overlay-position="full">
+          <img
+            src="https://user-images.githubusercontent.com/33434059/44483968-b5370b00-a609-11e8-9d8e-816aea63838a.gif"
+          >
+          <q-card-title slot="overlay">
+            Portfolio App
+          </q-card-title>
+        </q-card-media>
+        <q-card-separator />
+        <q-card-main class="no-pad">
+          <q-list>
+            <q-item>
+              <q-item-side>
+                <img src="~assets/vue-logo.png" alt="" width="30px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Vue.js</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="https://pbs.twimg.com/profile_images/883473889954852864/BC5h3cmj_400x400.jpg" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Quasar Framework</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="https://raw.githubusercontent.com/github/explore/31bb4034c9f4167799c1351a0d8418f4a245bc51/topics/zeit/zeit.png" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Now</q-item-tile>
+              </q-item-main>
+            </q-item>
+          </q-list>
+        </q-card-main>
+      </q-card>
+    </router-link>
+
+    <router-link to="/projects/ottno">
+      <q-card class="q-card grow">
+        <q-card-media overlay-position="full">
+          <img
+            src="../assets/ottno-ss.png"
+          >
+          <q-card-title slot="overlay">
+            On To The Next One<br>*In Progress
+          </q-card-title>
+        </q-card-media>
+        <q-card-separator />
+        <q-card-main class="no-pad">
+          <q-list>
+            <q-item>
+              <q-item-side>
+                <img src="~assets/vue-logo.png" alt="" width="30px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Vue.js</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="https://vuetifyjs.com/apple-touch-icon-180x180.png" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Vuetify</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="https://uploads-ssl.webflow.com/5b9838c153114f26f48c1c1c/5b9838c153114f16918c1cea_original%20logo%20icon.svg" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Timekit API</q-item-tile>
+              </q-item-main>
+            </q-item>
+            <q-item>
+              <q-item-side>
+                <img src="~assets/firebase.png" alt="" width="35px">
+              </q-item-side>
+              <q-item-main>
+                <q-item-tile label>Firebase</q-item-tile>
+              </q-item-main>
+            </q-item>
+          </q-list>
+        </q-card-main>
+      </q-card>
+    </router-link>
   </div>
 </template>
 

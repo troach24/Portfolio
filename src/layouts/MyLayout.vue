@@ -1,76 +1,81 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-layout-header>
-      <q-toolbar
-        color="positive"
-        :inverted="$q.theme === 'ios'"
-      >
-        <q-btn
-          flat
-          dense
-          round
-          @click="leftDrawerOpen = !leftDrawerOpen"
-          aria-label="Menu"
-        >
-          <q-icon name="menu" />
-        </q-btn>
-
-        <q-toolbar-title>
-          Travis Roach
-          <div slot="subtitle">Full Stack Web Developer - Denver, CO</div>
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-layout-header>
-
+    <Header :leftDrawerOpen="leftDrawerOpen"
+      @open-drawer="openDrawer"
+    />
     <q-layout-drawer
-      v-model="leftDrawerOpen"
-      :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
       :overlay='true'
+      v-model="leftDrawerOpen"
+      :content-class="$q.theme === 'mat' ? 'bg-tertiary' : null"
       :mini='true'
-      :mini-width='70'
-      :width='70'
+      :mini-width='80'
+      behavior='desktop'
     >
-      <q-list
-        no-border
-        link
-        inset-delimiter
-      >
-        <q-item @click.native="openURL('https://github.com/troach24/')">
-          <q-item-side icon="">
-            <q-icon name="fab fa-github-square" size=40px />
+      <q-list no-border link inset-delimiter>
+        <q-item @click.native="goToLink('https://github.com/troach24/')">
+          <q-item-side>
+            <small class="text-weight-light text-white">GitHub</small>
+            <br>
+            <q-icon
+              class="q-pt-sm q-pb-sm"
+              color="white"
+              name="fab fa-github-square"
+              size=40px
+            />
           </q-item-side>
-          <q-item-main label="GitHub" sublabel="github.com/troach24" />
         </q-item>
-        <q-item @click.native="openURL('http://www.linkedin.com/in/travis-roach/')">
-          <q-item-side icon="">
-            <q-icon name="fab fa-linkedin" size=40px />
+        <q-item @click.native="goToLink('http://www.linkedin.com/in/travis-roach/')">
+          <q-item-side>
+            <small class="text-weight-light text-white">LinkedIn</small>
+            <br>
+            <q-icon
+              class="q-pt-sm q-pb-sm"
+              color="white"
+              name="fab fa-linkedin"
+              size=40px
+            />
           </q-item-side>
-          <q-item-main label="LinkedIn" sublabel="linkedin.com/in/travis-roach/" />
         </q-item>
-        <q-item @click.native="openURL('https://twitter.com/TravisRoach24')">
-          <q-item-side icon="">
-            <q-icon name="fab fa-twitter-square" size=40px />
+        <q-item @click.native="goToLink('https://twitter.com/TravisRoach24')">
+          <q-item-side>
+            <small class="text-weight-light text-white">Twitter</small>
+            <br>
+            <q-icon
+              class="q-pt-sm q-pb-sm"
+              color="white"
+              name="fab fa-twitter-square"
+              size=40px
+            />
           </q-item-side>
-          <q-item-main label="Twitter" sublabel="@TravisRoach24" />
+        </q-item>
+        <q-item>
+          <q-item-side>
+            <router-link to="/projects">
+              <small class="text-weight-light text-white">Projects</small>
+              <br>
+              <q-icon
+                class="q-pt-sm q-pb-sm"
+                color="white"
+                name="fas fa-dolly"
+                size=37px
+              />
+            </router-link>
+          </q-item-side>
+        </q-item>
+        <q-item @click.native="goToLink('https://drive.google.com/file/d/1wmCizCRbE2J1wWzVCHAH-5ckQ8Qsk2AU/view?usp=sharing')">
+          <q-item-side>
+            <small class="text-weight-light text-white">Resume</small>
+            <br>
+            <q-icon
+              class="q-pt-sm q-pb-sm"
+              color="white"
+              name="far fa-file-alt"
+              size=40px
+            />
+          </q-item-side>
         </q-item>
       </q-list>
-
-      <q-list
-        no-border
-        link
-        inset-delimiter
-      >
-          <q-item>
-            <q-item-side>
-              <router-link to="/projects">
-                <q-icon name="fas fa-rocket" size=40px color="faded" />
-              </router-link>
-            </q-item-side>
-          </q-item>
-      </q-list>
-
     </q-layout-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -79,17 +84,27 @@
 
 <script>
 import { openURL } from 'quasar';
+import Header from '../components/Header';
 
 export default {
   name: 'MyLayout',
+  components: {
+    Header,
+  },
   data() {
     return {
-      leftDrawerOpen: false,
-      // leftDrawerOpen: this.$q.platform.is.desktop,
+      leftDrawerOpen: true,
     };
   },
   methods: {
-    openURL,
+    openDrawer() {
+      this.leftDrawerOpen = !this.leftDrawerOpen;
+    },
+    goToLink(str) {
+      openURL(str);
+    },
+  },
+  computed: {
   },
 };
 </script>
@@ -97,5 +112,8 @@ export default {
 <style>
 a {
   text-decoration: none;
+}
+#home-link {
+  color: white;
 }
 </style>

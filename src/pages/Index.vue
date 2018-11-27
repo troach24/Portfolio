@@ -1,14 +1,16 @@
 <template>
   <q-page class="flex flex-center container">
     <div>
-      <h1 class="animate-scale title-text">Travis Roach<br></h1>
-      <h3 class="animate-scale title-text">What am I up to?</h3>
+      <h1 class="animate-scale title-text text-tertiary">Travis Roach<br></h1>
+      <h3 class="animate-scale title-text text-tertiary">An app that revolves around me.</h3>
     </div>
     <div class="home-buttons">
       <router-link to="/projects">
-        <q-btn outline rounded color="black" label="Projects" />
+        <q-btn class="q-mr-sm" outline rounded color="blue-9" label="Projects" />
       </router-link>
-      <!-- <q-btn outline rounded color="black" label="Outlined Button" /> -->
+      <router-link to="/about">
+        <q-btn class="q-ml-sm" outline rounded color="blue-9" label="About Me" />
+      </router-link>
     </div>
   </q-page>
 </template>

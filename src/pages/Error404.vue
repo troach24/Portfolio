@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed-center text-center">
+  <div class="fixed-center text-center animate-scale">
     <p>
       <img
         src="~assets/sad.svg"
