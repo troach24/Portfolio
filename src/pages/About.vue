@@ -35,6 +35,39 @@ export default {
     AboutCardDesktop,
     AboutCardMobile,
   },
+  data: () => ({
+    emailMessage: {
+      name: 'Travis',
+      email: 'email',
+      message: 'eyyyyyyyY',
+    },
+  }),
+  async mounted() {
+    const emailTest = await this.testEmail();
+    console.log(emailTest);
+  },
+  methods: {
+    async testEmail() {
+      const res = await fetch('http://localhost:3000/contact', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: JSON.stringify(this.emailMessage),
+      });
+      return res.json();
+    },
+    async testServer() {
+      const res = await fetch('http://localhost:3000/', {
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
+      return res.json();
+    },
+  },
 };
 </script>
 
