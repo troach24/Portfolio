@@ -1,14 +1,6 @@
 <template>
   <q-page class="flex flex-center q-ml-none q-pl-none">
     <div class="container">
-      <!-- update styling & design on about me page -->
-      <!-- <img src="https://docs.google.com/uc?export=download&id=15JYvV5N7ENiojcn552tGfwwk-E-0sJEc" alt=""> -->
-      <!-- <img
-        src="https://render.bitstrips.com/v2/cpanel/7e3bc453-64fb-4a34-bcaa-481724e5d3d9-e362807d-2567-490a-be3e-168e20f4adea-v1.png?transparent=1&palette=1"
-        alt="Soul searching bitmoji"
-        width="200px"
-      >
-      <h3 class="q-mt-sm">Hang tight while I do some soul searching...</h3> -->
       <q-btn
         class="q-mb-lg"
         rounded
@@ -37,35 +29,26 @@ export default {
   },
   data: () => ({
     emailMessage: {
-      name: 'Travis',
-      email: 'email',
-      message: 'eyyyyyyyY',
+      subject: 'Rough Subject',
+      name: 'T Rizzle My Nizzle',
+      email: 'real.steezy@gmail.com',
+      message: 'Yo DAWG I miss you',
     },
   }),
   async mounted() {
-    const emailTest = await this.testEmail();
-    console.log(emailTest);
+    await this.testEmail();
   },
   methods: {
     async testEmail() {
       const res = await fetch('http://localhost:3000/contact', {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
+          'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify(this.emailMessage),
       });
-      return res.json();
-    },
-    async testServer() {
-      const res = await fetch('http://localhost:3000/', {
-        mode: 'no-cors',
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        },
-      });
-      return res.json();
+      return res;
     },
   },
 };
