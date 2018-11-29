@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     async testEmail() {
-      const res = await fetch('http://localhost:3000/contact', {
+      const res = await fetch('https://portfolio-server-tr.herokuapp.com/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
