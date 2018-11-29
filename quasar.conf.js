@@ -52,7 +52,9 @@ module.exports = function (ctx) {
         'QCarousel',
         'QCarouselControl',
         'QCarouselSlide',
+        'QField',
         'QIcon',
+        'QInput',
         'QItem',
         'QItemMain',
         'QItemSide',
@@ -73,6 +75,7 @@ module.exports = function (ctx) {
       directives: [
         'Ripple',
         'GoBack',
+        'CloseOverlay',
       ],
       // Quasar plugins
       plugins: [

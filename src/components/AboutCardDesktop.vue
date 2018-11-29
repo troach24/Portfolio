@@ -1,13 +1,23 @@
 <template>
   <div>
-    <q-card class="animate-scale" inline style="width: 800px">
+    <q-card class="animate-scale q-ma-xs" inline style="width: 800px">
       <q-card-media overlay-position="bottom">
         <img src="~assets/bio-pic-2.jpg">
         <q-card-title slot="overlay">
           Web Developer
           <span slot="subtitle"><q-icon name="place" /> Denver, CO</span>
-          <a slot="right" href="https://drive.google.com/file/d/1wmCizCRbE2J1wWzVCHAH-5ckQ8Qsk2AU/view?usp=sharing" target="_blank">
-            <q-btn class="row items-center" color="primary" label="Contact Me" />
+          <q-btn
+          slot="right"
+            class="row items-center"
+            color="primary"
+            @click="yes = !yes"
+            label="Contact Me"
+          />
+          <a
+            slot="right"
+            href="https://drive.google.com/file/d/1wmCizCRbE2J1wWzVCHAH-5ckQ8Qsk2AU/view?usp=sharing"
+            target="_blank"
+          >
             <q-btn class="row items-center q-ml-sm" color="primary" label="View Resume" />
           </a>
         </q-card-title>
@@ -87,11 +97,68 @@
           </a>
       </q-card-actions>
     </q-card>
+    <q-card v-if="yes" class="animate-scale q-ma-xs" inline style="width: 800px">
+      <q-card-title>
+        <!-- <div class="q-subheading">
+          Thanks for reaching out. I will receive your message via email and get back to you ASAP!
+        </div> -->
+
+        <div>
+          <q-input v-model="emailObj.name" stack-label="Name" value />
+          <q-input v-model="emailObj.email" stack-label="Email" value />
+          <q-input v-model="emailObj.subject" stack-label="Phone Number" value />
+          <q-input
+            v-model="emailObj.message"
+            type="textarea"
+            float-label="Message"
+            :max-height="100"
+            rows="7"
+          />
+        </div>
+
+      </q-card-title>
+      <!-- <q-card-main>
+         <q-btn flat label="SEND IT" />
+      </q-card-main> -->
+      <q-card-separator />
+      <q-card-actions align="end">
+        <q-btn class="q-mr-sm" color="deep-orange" label="Cancel" />
+        <q-btn
+          :loading="loading"
+          class="q-mr-sm"
+          color="primary"
+          label="SEND IT"
+          @click="simulateProgress()"
+        >
+          <span slot="loading">Sending...</span>
+        </q-btn>
+      </q-card-actions>
+    </q-card>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['sendEmail'],
+  data: () => ({
+    value: '',
+    yes: false,
+    loading: false,
+    emailObj: {},
+  }),
+  methods: {
+    simulateProgress() {
+      console.log(this.emailObj);
+      this.loading = true;
+      this.$emit('submit-email', this.emailObj);
+      // await this.sendEmail();
+      setTimeout(() => {
+        this.loading = false;
+        this.yes = false;
+        // display pop up for SUCCESS! 🙌
+      }, 2000);
+    },
+  },
 };
 </script>
 

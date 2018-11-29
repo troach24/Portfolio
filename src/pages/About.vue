@@ -9,10 +9,9 @@
         color="blue-9"
         label="Back"
       />
-
-      <AboutCardDesktop v-if="$q.platform.is.desktop" />
-      <AboutCardMobile v-if="$q.platform.is.mobile" />
-
+      <AboutCardDesktop
+      @submit-email="computed" :sendEmail="sendEmail" v-if="$q.platform.is.desktop" />
+      <AboutCardMobile :sendEmail="sendEmail()" v-if="$q.platform.is.mobile" />
     </div>
   </q-page>
 </template>
@@ -35,21 +34,22 @@ export default {
       message: 'Yo DAWG I miss you',
     },
   }),
-  async mounted() {
-    await this.testEmail();
-  },
   methods: {
-    async testEmail() {
+    async sendEmail(obj) {
       const res = await fetch('https://portfolio-server-tr.herokuapp.com/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         },
-        body: JSON.stringify(this.emailMessage),
+        body: JSON.stringify(obj),
       });
       return res;
     },
+  },
+  async computed(obj) {
+    const res = await this.sendEmail(obj);
+    return res;
   },
 };
 </script>
