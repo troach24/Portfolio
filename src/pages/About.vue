@@ -10,8 +10,15 @@
         label="Back"
       />
       <AboutCardDesktop
-      @submit-email="computed" :sendEmail="sendEmail" v-if="$q.platform.is.desktop" />
-      <AboutCardMobile :sendEmail="sendEmail()" v-if="$q.platform.is.mobile" />
+        :sendEmail="sendEmail"
+        v-if="$q.platform.is.desktop"
+        :emailObj="emailObj"
+      />
+      <AboutCardMobile
+        :sendEmail="sendEmail"
+        v-if="$q.platform.is.mobile"
+        :emailObj="emailObj"
+      />
     </div>
   </q-page>
 </template>
@@ -27,29 +34,20 @@ export default {
     AboutCardMobile,
   },
   data: () => ({
-    emailMessage: {
-      subject: 'Rough Subject',
-      name: 'T Rizzle My Nizzle',
-      email: 'real.steezy@gmail.com',
-      message: 'Yo DAWG I miss you',
-    },
+    emailObj: {},
   }),
   methods: {
-    async sendEmail(obj) {
+    async sendEmail() {
       const res = await fetch('https://portfolio-server-tr.herokuapp.com/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Access-Control-Allow-Origin': '*',
         },
-        body: JSON.stringify(obj),
+        body: JSON.stringify(this.emailObj),
       });
       return res;
     },
-  },
-  async computed(obj) {
-    const res = await this.sendEmail(obj);
-    return res;
   },
 };
 </script>

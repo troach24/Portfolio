@@ -7,10 +7,10 @@
           Web Developer
           <span slot="subtitle"><q-icon name="place" /> Denver, CO</span>
           <q-btn
-          slot="right"
+            slot="right"
             class="row items-center"
             color="primary"
-            @click="yes = !yes"
+            @click="contactForm = true"
             label="Contact Me"
           />
           <a
@@ -97,16 +97,12 @@
           </a>
       </q-card-actions>
     </q-card>
-    <q-card v-if="yes" class="animate-scale q-ma-xs" inline style="width: 800px">
+    <q-card v-if="contactForm" class="animate-scale q-ma-xs" inline style="width: 800px">
       <q-card-title>
-        <!-- <div class="q-subheading">
-          Thanks for reaching out. I will receive your message via email and get back to you ASAP!
-        </div> -->
-
         <div>
-          <q-input v-model="emailObj.name" stack-label="Name" value />
-          <q-input v-model="emailObj.email" stack-label="Email" value />
-          <q-input v-model="emailObj.subject" stack-label="Phone Number" value />
+          <q-input v-model="emailObj.name" stack-label="Your Name" value />
+          <q-input v-model="emailObj.email" stack-label="Your Email" value />
+          <q-input v-model="emailObj.subject" stack-label="Subject" value />
           <q-input
             v-model="emailObj.message"
             type="textarea"
@@ -115,20 +111,16 @@
             rows="7"
           />
         </div>
-
       </q-card-title>
-      <!-- <q-card-main>
-         <q-btn flat label="SEND IT" />
-      </q-card-main> -->
       <q-card-separator />
       <q-card-actions align="end">
-        <q-btn class="q-mr-sm" color="deep-orange" label="Cancel" />
+        <q-btn @click="contactForm = false" class="q-mr-sm" color="deep-orange" label="Cancel" />
         <q-btn
           :loading="loading"
           class="q-mr-sm"
           color="primary"
           label="SEND IT"
-          @click="simulateProgress()"
+          @click="submitMessage()"
         >
           <span slot="loading">Sending...</span>
         </q-btn>
@@ -139,23 +131,21 @@
 
 <script>
 export default {
-  props: ['sendEmail'],
+  props: ['sendEmail', 'emailObj'],
   data: () => ({
     value: '',
-    yes: false,
+    contactForm: false,
     loading: false,
-    emailObj: {},
   }),
   methods: {
-    simulateProgress() {
-      console.log(this.emailObj);
+    async submitMessage() {
       this.loading = true;
-      this.$emit('submit-email', this.emailObj);
-      // await this.sendEmail();
+      await this.sendEmail();
       setTimeout(() => {
         this.loading = false;
-        this.yes = false;
+        this.contactForm = false;
         // display pop up for SUCCESS! 🙌
+        // include a phone number field with contact form
       }, 2000);
     },
   },
