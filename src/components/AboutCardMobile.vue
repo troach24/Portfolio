@@ -90,9 +90,32 @@ export default {
       setTimeout(() => {
         this.loading = false;
         this.contactForm = false;
-        // display pop up for SUCCESS! 🙌
-        // include a phone number field with contact form
+        this.notification();
       }, 2000);
+    },
+    notification() {
+      this.$q.notify({
+        message: 'Thank you for reaching out!',
+        timeout: 4000,
+        type: 'positive',
+
+        color: 'positive',
+        textColor: 'black',
+        icon: 'check',
+        detail: 'I will be in touch as soon as possible.',
+        position: 'top-right',
+
+        actions: [
+          {
+            label: 'Okay',
+            noDismiss: false,
+            handler: () => {
+            },
+          },
+        ],
+        onDismiss() {
+        },
+      });
     },
   },
 };
