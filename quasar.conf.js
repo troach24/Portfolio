@@ -53,7 +53,7 @@ module.exports = function (ctx) {
         'QCarouselControl',
         'QCarouselSlide',
         'QField',
-        'QJumbotron',
+        // 'QJumbotron',
         'QIcon',
         'QInput',
         'QItem',
