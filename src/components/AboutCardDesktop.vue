@@ -146,7 +146,46 @@ export default {
         this.contactForm = false;
         // display pop up for SUCCESS! 🙌
         // include a phone number field with contact form
-      }, 2000);
+        this.notification();
+      }, 200);
+      // was 2000
+    },
+    notification() {
+      this.$q.notify({
+        // only required parameter is the message:
+        message: 'Thank you for reaching out!',
+
+        /*
+        * All parameters below are optional:
+        */
+
+        timeout: 4000, // in milliseconds; 0 means no timeout
+        // was 4000
+
+        // "type" adds a color and icon,
+        // so you don't need to specify them.
+        // Available values: 'positive', 'negative', 'warning', 'info'
+        type: 'positive',
+
+        color: 'positive',
+        textColor: 'black', // if default 'white' doesn't fits
+        icon: 'check',
+        detail: 'I will be in touch as soon as possible.',
+        position: 'top-right', // 'top', 'left', 'bottom-left' etc
+
+        actions: [
+          {
+            label: 'Okay',
+            // icon: 'checkbox', // optional
+            noDismiss: false, // optional, v0.15.11+
+            handler: () => {
+              console.log('Confirmed popup message');
+            },
+          },
+        ],
+        onDismiss() { // v0.15.11+
+        },
+      });
     },
   },
 };

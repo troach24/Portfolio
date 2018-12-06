@@ -2,7 +2,8 @@
   <q-page class="flex flex-center container">
     <div>
       <h1 class="animate-scale title-text text-tertiary">Travis Roach<br></h1>
-      <h3 class="animate-scale title-text text-tertiary">An app that revolves around me.</h3>
+      <h3 class="animate-scale title-text text-tertiary">'Fortune favors the audacious'</h3>
+      <div class="q-ml-lg float-left q-subheading">- Desiderius Erasmus</div>
     </div>
     <div class="home-buttons">
       <router-link to="/projects">
